@@ -278,4 +278,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Fusion v10** - Built for the future of AI-assisted design and strategy. 🚀 
+**Fusion v10** - Built for the future of AI-assisted design and strategy. 🚀
