@@ -1,281 +1,231 @@
-# Fusion v10 - Multi-Agent Platform
+# Bitcoin Agentic Desktop - AI-Powered Financial Case Management
 
-A containerized multi-agent platform with self-reflection, debate, and auto-evaluation capabilities.
+A modern, responsive desktop application for Bitcoin-related financial case management with AI-powered assistance.
 
-## 🚀 System Overview
+## 🚀 Live Demo
 
-Fusion v10 is a sophisticated multi-agent system designed for design, strategy, and content creation tasks. The platform features autonomous agents that collaborate, debate, and evaluate each other's work to deliver high-quality outputs.
+Visit the live application: **[Bitcoin Agentic Desktop](https://soheiloliaei.github.io/Agentic_V1/)**
 
-### Architecture
+## 🎯 Overview
 
+The Bitcoin Agentic Desktop is a sophisticated web application designed for financial professionals managing Bitcoin-related cases. It features an intuitive interface with AI-powered assistance, providing comprehensive case management capabilities.
+
+## ✨ Features
+
+### 🎨 Modern UI/UX
+- **Responsive Layout**: 30%-40%-30% panel distribution that adapts to different screen sizes
+- **Dynamic Height Synchronization**: Panels automatically adjust height based on content
+- **Collapsible Modules**: Smooth animations for expanding/collapsing content sections
+- **ShadCN Design System**: Consistent styling with professional shadows and borders
+- **Dark Mode Ready**: Built with modern CSS variables for easy theme switching
+
+### 🛠️ Core Functionality
+- **Customer Information Management**: Comprehensive customer profiles and account details
+- **Case Summary**: Compact case overview with key metrics and status indicators
+- **Previous Cases/Transactions**: Collapsible history with search capabilities
+- **Knowledge Base**: Integrated reference materials and documentation
+- **AI Copilot**: Intelligent assistant for case analysis and recommendations
+
+### 📱 Responsive Design
+- **Mobile-First**: Optimized for all device sizes
+- **Breakpoint System**: Smooth transitions across different screen sizes
+- **Touch-Friendly**: Intuitive interactions for mobile devices
+- **Cross-Browser**: Compatible with all modern browsers
+
+## 🏗️ Architecture
+
+### Frontend Technologies
+- **HTML5**: Semantic markup with accessibility features
+- **CSS3**: Modern styling with CSS Grid and Flexbox
+- **JavaScript**: ES6+ features for dynamic interactions
+- **ShadCN Components**: Consistent UI component library
+
+### Design System
+- **Typography**: Professional font hierarchy
+- **Color Scheme**: Carefully selected color palette with CSS variables
+- **Spacing**: Consistent spacing system throughout the application
+- **Shadows**: Sophisticated shadow system for depth and hierarchy
+
+## 🎨 UI Components
+
+### Panel System
+```css
+/* 30%-40%-30% Layout */
+.grid-cols-3 {
+  grid-template-columns: 30% 40% 30%;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1400px) { /* Tablet layout */ }
+@media (max-width: 1024px) { /* Mobile layout */ }
 ```
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   API Gateway   │───▶│ Dispatcher       │───▶│ Agent Pool      │
-└─────────────────┘    │ Service          │    │                 │
-                       └──────────────────┘    │ • PromptEng     │
-┌─────────────────┐                            │ • DesignTech    │
-│ EvaluatorAgent  │◀───────────────────────────│ • CreativeDir   │
-│ Service         │                            │ • InsightsSynth │
-└─────────────────┘                            │ • NarrativeArch │
-                                               │ • DesignMaestro │
-┌─────────────────┐    ┌──────────────────┐    │ • StrategyPilot │
-│ Retrain         │───▶│ Metrics Store    │    │ • CriticalAdv   │
-│ Scheduler       │    └──────────────────┘    │ • VPDesign      │
-└─────────────────┘                            └─────────────────┘
+
+### Collapsible Modules
+- **Smooth Animations**: 300ms transitions for expand/collapse
+- **State Management**: JavaScript-powered state tracking
+- **Accessibility**: ARIA labels and keyboard navigation
+
+### Dynamic Height System
+- **Auto-Adjustment**: Panels sync height based on content
+- **Smooth Transitions**: Animated height changes
+- **Content Awareness**: Responsive to module expansion/collapse
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Internet connection for fonts and assets
+
+### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/soheiloliaei/Agentic_V1.git
+   cd Agentic_V1
+   ```
+
+2. **Open the application:**
+   - Open `index.html` in your web browser
+   - Or access the live version at: https://soheiloliaei.github.io/Agentic_V1/
+
+### Development
+For local development with hot reload:
+```bash
+# Install dependencies (if using Node.js development)
+npm install
+
+# Start development server
+npm run dev
 ```
-
-## 🤖 Implemented Agents
-
-### Core Orchestration
-- **PromptEngineer** - Tags input, compresses ideas, proposes routing tags, tracks belief & uncertainty
-- **Dispatcher** - Maps tags→agents, enforces debate & fallback, logs trust chain
-- **EvaluatorAgent** - Autonomously scores each handoff against rubrics
-
-### Specialized Agents
-- **DesignTechnologist** - Generates component/Framer/UI code prompts, runs self-check
-- **CreativeDirector** - Crafts copy/visuals with meta-reflection on tone & bias
-
-### Architecture Support
-- **BaseAgent** - Abstract base class with self-check, metrics logging, and belief state tracking
 
 ## 📁 Project Structure
 
 ```
-Fusion_v10/
-├── fusion_agents.py              # Core agents (BaseAgent, EvaluatorAgent, PromptEngineer)
-├── fusion_agents_extended.py     # Additional agents (Dispatcher, DesignTech, CreativeDir)
-├── evaluator_test.py             # Original pytest test suite
-├── fine_tune_pipeline.workflow.yaml  # Argo Workflows fine-tuning pipeline
-├── default_rubric.json          # Default evaluation rubric
-├── requirements.txt              # Python dependencies
-├── fusion_agent_profiles_v_10.json   # Agent specifications
-├── fusion_agent_playbooks_v_10.json  # Agent workflows
-├── fusion_schema_v_7.json        # Data schema
-├── architecture_*.puml          # System architecture diagrams
-├── ci_cd_pipeline.yaml          # CI/CD configuration
+Agentic_V1/
+├── index.html                    # GitHub Pages entry point
+├── bitcoin_agentic_desktop_p0.html  # Main application
+├── src/                          # Source components
+│   ├── components/
+│   │   └── ui/                   # UI components
+│   │       ├── badge.tsx
+│   │       ├── button.tsx
+│   │       ├── card.tsx
+│   │       ├── input.tsx
+│   │       └── textarea.tsx
+│   ├── lib/
+│   │   └── utils.ts             # Utility functions
+│   ├── App.tsx                  # Main app component
+│   └── App.css                  # Global styles
+├── tailwind.config.js           # Tailwind CSS configuration
+├── package.json                 # Project dependencies
 └── README.md                    # This file
 ```
 
-## 🧪 Testing
+## 🎯 Key Features Breakdown
 
-### Run Individual Agent Tests
-```bash
-# Test the original EvaluatorAgent (requires pytest)
-python3 -m pytest evaluator_test.py -v
+### Customer Information Module
+- **Account Selection**: Personal/Business account switching
+- **Profile Management**: Comprehensive customer details
+- **Status Tracking**: Real-time status indicators
 
-# Test import and basic functionality
-python3 -c "from fusion_agents import PromptEngineer; pe = PromptEngineer(); print('✓ Agents loaded successfully')"
-```
+### Case Management
+- **Case Summary**: Compact overview with key metrics
+- **Priority Levels**: Visual priority indicators
+- **Status Tracking**: Current case status with color coding
+- **Problem Identification**: AI-powered issue detection
 
-### Agent Capabilities Verification
+### Historical Data
+- **Previous Cases**: Searchable case history with collapsible interface
+- **Transaction History**: Detailed transaction records
+- **Pattern Recognition**: AI-assisted pattern identification
 
-All agents have been tested and verified to work correctly:
+### AI Copilot
+- **Intelligent Assistance**: Context-aware recommendations
+- **Case Analysis**: Automated case evaluation
+- **Knowledge Base Integration**: Instant access to relevant documentation
+- **Natural Language Processing**: Conversational interface
 
-- ✅ **PromptEngineer**: Processes task text, generates tags, detects ambiguity
-- ✅ **Dispatcher**: Routes tasks to appropriate agents, orchestrates debates
-- ✅ **DesignTechnologist**: Creates UI components, Framer prompts, code templates
-- ✅ **CreativeDirector**: Generates copy variations, performs bias audits
-- ✅ **EvaluatorAgent**: Scores outputs against rubrics, meets latency requirements
+## 🔧 Customization
 
-## 🔧 Usage Examples
-
-### Basic Agent Usage
-
-```python
-from fusion_agents import PromptEngineer, EvaluatorAgent
-from fusion_agents_extended import Dispatcher, DesignTechnologist
-
-# Initialize agents
-prompt_engineer = PromptEngineer()
-dispatcher = Dispatcher()
-design_tech = DesignTechnologist()
-evaluator = EvaluatorAgent(rubric_ref="default_rubric.json")
-
-# Process a task
-task_result = prompt_engineer.execute({
-    'task_text': 'Create a modern design system for our e-commerce platform',
-    'context': {'user_id': 'user123', 'sla_tier': 'premium'}
-})
-
-# Route to appropriate agents
-routing_result = dispatcher.execute({
-    'prompt_logic': task_result['prompt_logic'],
-    'ambiguity_score': task_result['ambiguity_score']
-})
-
-# Execute specialized agent
-if 'DesignTechnologist' in routing_result['selected_agents']:
-    design_result = design_tech.execute({
-        'prompt_logic': task_result['prompt_logic']
-    })
-
-# Evaluate the output
-evaluation = evaluator.execute({
-    'output': str(design_result),
-    'rubric': {'accuracy': 0.9, 'completeness': 0.8}
-})
-```
-
-### Complete Workflow Integration
-
-```python
-# Simulate the full Fusion v10 workflow
-def run_fusion_workflow(task_text, context=None):
-    # Step 1: Process input
-    pe = PromptEngineer()
-    pe_result = pe.execute({'task_text': task_text, 'context': context or {}})
-    
-    # Step 2: Route to agents
-    dispatcher = Dispatcher()
-    routing = dispatcher.execute({
-        'prompt_logic': pe_result['prompt_logic'],
-        'ambiguity_score': pe_result['ambiguity_score']
-    })
-    
-    # Step 3: Execute selected agents
-    results = {}
-    for agent_name in routing['selected_agents']:
-        if agent_name == 'DesignTechnologist':
-            agent = DesignTechnologist()
-            results[agent_name] = agent.execute({'prompt_logic': pe_result['prompt_logic']})
-    
-    # Step 4: Evaluate results
-    evaluator = EvaluatorAgent(rubric_ref="default_rubric.json")
-    evaluations = {}
-    for agent_name, result in results.items():
-        evaluations[agent_name] = evaluator.execute({
-            'output': str(result),
-            'rubric': {'accuracy': 0.9, 'completeness': 0.8}
-        })
-    
-    return {
-        'prompt_analysis': pe_result,
-        'routing': routing,
-        'agent_results': results,
-        'evaluations': evaluations
-    }
-
-# Run the workflow
-result = run_fusion_workflow("Design a user onboarding flow with modern components")
-```
-
-## 🏗️ Production Deployment
-
-### Prerequisites
-- Python 3.9+
-- Kubernetes cluster (for fine-tuning pipeline)
-- Argo Workflows (for automated retraining)
-
-### Installation
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Verify installation
-python3 -c "from fusion_agents import *; print('✓ Fusion v10 installed successfully')"
-```
-
-### CI/CD Pipeline
-The system includes automated CI/CD with:
-- Unit testing on every commit
-- JSON schema validation
-- Automated fine-tuning pipeline
-- Kubernetes deployment
-
-```bash
-# Run CI/CD pipeline locally
-kubectl apply -f ci_cd_pipeline.yaml
-```
-
-### Fine-Tuning Pipeline
-Automated model retraining triggers when:
-- Feedback store reaches 1000+ entries
-- Weekly scheduled runs
-- Manual trigger via API
-
-```bash
-# Deploy fine-tuning pipeline
-kubectl apply -f fine_tune_pipeline.workflow.yaml
-```
-
-## 📊 Quality Metrics
-
-Each agent maintains quality metrics according to their contracts:
-
-| Agent | Target Metric | Measured By | Latency Target |
-|-------|---------------|-------------|----------------|
-| PromptEngineer | 95% precision | precision_at_k | 200ms |
-| Dispatcher | 97% routing accuracy | confusion_matrix | 150ms |
-| DesignTechnologist | 90% completeness | component_coverage | 400ms |
-| CreativeDirector | 88% engagement | A/B_test | 500ms |
-| EvaluatorAgent | 95% evaluation accuracy | rubric_match | 300ms |
-
-## 🔄 Self-Reflection & Belief States
-
-All agents implement self-reflection capabilities:
-
-```python
-# Example self-check
-agent = PromptEngineer()
-self_check_result = agent.self_check("What assumptions am I making?")
-
-print(self_check_result)
-# {
-#   "belief_state": "ready",
-#   "uncertainty_flag": false,
-#   "assumptions": ["Task text is in English", "Context is relevant"],
-#   "uncertainty_level": 0.1
-# }
-```
-
-## 🎯 Agent Contracts
-
-Each agent has formal input/output contracts with guarantees:
-
-```json
-{
-  "PromptEngineer": {
-    "inputs": ["task_text", "context"],
-    "guarantees": {"precision": 0.95},
-    "fallback_on": ["high_uncertainty"]
-  },
-  "Dispatcher": {
-    "inputs": ["tag_list"],
-    "guarantees": {"routing_accuracy": 0.97},
-    "fallback_on": ["missing_tag", "debate_required"]
-  }
+### Theming
+The application uses CSS variables for easy theming:
+```css
+:root {
+  --primary: #000000;
+  --secondary: #6b7280;
+  --background: #ffffff;
+  --foreground: #000000;
+  --muted: #f3f4f6;
+  --border: #e5e7eb;
+  /* ... more variables */
 }
 ```
 
-## 🚀 Future Roadmap
+### Responsive Breakpoints
+```css
+/* Tablet */
+@media (max-width: 1400px) {
+  .grid-cols-3 { grid-template-columns: 35% 30% 35%; }
+}
 
-### Planned Agents
-- **InsightsSynthesizer** - Pattern detection and clustering
-- **NarrativeArchitect** - Story mapping and critique chains
-- **DesignMaestro** - Journey mapping and friction detection
-- **StrategyPilot** - Strategic options and debate participation
-- **CriticalDesignAdvisor** - Independent critique and audit enforcement
-- **VPDesign** - Final validation and approval
+/* Mobile */
+@media (max-width: 1024px) {
+  .grid-cols-3 { grid-template-columns: 1fr; }
+}
+```
 
-### Planned Features
-- **Debate System** - Multi-agent collaborative reasoning
-- **Knowledge Base Integration** - Vector search and retrieval
-- **Fusion Console** - Web UI for monitoring and management
-- **Advanced Bias Detection** - Enhanced audit rules and checks
-- **Real-time Collaboration** - Live agent interaction
+## 🌟 Performance Features
 
-## 📝 Contributing
+- **Optimized Loading**: Efficient resource loading
+- **Smooth Animations**: Hardware-accelerated transitions
+- **Memory Management**: Efficient DOM manipulation
+- **Accessibility**: WCAG 2.1 compliant
+
+## 🔒 Security Features
+
+- **Data Validation**: Client-side input validation
+- **Secure Communication**: HTTPS-only in production
+- **Privacy Protection**: No sensitive data stored locally
+
+## 🚀 Deployment
+
+### GitHub Pages
+The application is automatically deployed to GitHub Pages:
+1. Push changes to the `main` branch
+2. GitHub Pages automatically builds and deploys
+3. Access at: https://soheiloliaei.github.io/Agentic_V1/
+
+### Custom Domain
+To use a custom domain:
+1. Add a `CNAME` file to the repository root
+2. Configure DNS settings
+3. Update GitHub Pages settings
+
+## 📊 Browser Support
+
+- ✅ Chrome (latest)
+- ✅ Firefox (latest)
+- ✅ Safari (latest)
+- ✅ Edge (latest)
+- ✅ Mobile browsers
+
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
-3. Add tests for new functionality
-4. Ensure all tests pass
+3. Make your changes
+4. Test thoroughly
 5. Submit a pull request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## 🔗 Links
+
+- **Live Application**: https://soheiloliaei.github.io/Agentic_V1/
+- **Repository**: https://github.com/soheiloliaei/Agentic_V1
+- **Issues**: https://github.com/soheiloliaei/Agentic_V1/issues
+
 ---
 
-**Fusion v10** - Built for the future of AI-assisted design and strategy. 🚀
+**Bitcoin Agentic Desktop** - Modern financial case management powered by AI 🚀
