@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Agentic Desktop - Fusion v10</title>
+    <meta http-equiv="refresh" content="0; url=bitcoin_agentic_desktop_p0.html">
+    <link rel="canonical" href="bitcoin_agentic_desktop_p0.html">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #fafafa 0%, #f4f4f5 100%);
+            color: #333;
+        }
+        .loader {
+            text-align: center;
+        }
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #000;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .fallback {
+            margin-top: 20px;
+        }
+        .fallback a {
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+        .fallback a:hover {
+            background: #000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+        <h2>Loading Bitcoin Agentic Desktop...</h2>
+        <p>Redirecting to the application...</p>
+        <div class="fallback">
+            <p>If you're not redirected automatically:</p>
+            <a href="bitcoin_agentic_desktop_p0.html">Click here to access the application</a>
+        </div>
+    </div>
+
+    <script>
+        // Fallback redirect for older browsers
+        setTimeout(function() {
+            window.location.href = 'bitcoin_agentic_desktop_p0.html';
+        }, 2000);
+    </script>
+</body>
+</html> 
